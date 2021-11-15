@@ -13,6 +13,7 @@ bulmaCarousel.attach('#slider', {
 
 $.ajax({
     url: 'https://api.rawg.io/api/games?ordering=-added&key=290a2f4d6d414e40a682d5e31ce6648c&tags=multiplayer',
+    // Plz don't take this, I don't want to build a server right now just to hide. It's on the to do 😅
     method: 'GET',
 }).then(function (response) {
     console.log(response);
@@ -33,6 +34,3 @@ $("#slider").click(function (event) {
     // Send user to events.html
     window.location.href = "events.html";
 });
-
-
-console.log(API);

@@ -2,7 +2,7 @@
     // This will be given a value in the Game Container, then used in the Form Container
     let selectedGame;
 
-    // Store infomation from AJAX request
+    // Store information from AJAX request
     let gameData = {
         title: "",
         image: "",
@@ -25,7 +25,7 @@
         }
         // If key has value, update value of selectedGame
         selectedGame = localGame;
-        // Remove key from local storage so same game doesn't load everytime
+        // Remove key from local storage so same game doesn't load every time
         localStorage.removeItem("passGame");
         // Run rawgReq with game from local storage
         rawgReq(selectedGame);
@@ -33,7 +33,8 @@
 
     // Create AJAX Request to RAWG API
     function rawgReq() {        
-        let url = 'https://api.rawg.io/api/games?search=' + selectedGame;
+        let url = 'https://api.rawg.io/api/games?search=' + selectedGame + '&key=290a2f4d6d414e40a682d5e31ce6648c';
+        // Plz don't take this, I don't want to build a server right now just to hide. It's on the to do 😅
                 // console.log(url);
         // Hide search bar
         $('#game-search').addClass('hide');
@@ -159,6 +160,7 @@
     // Next Button: Remove Game Container From the Screen and Display Calendar Container
     $('.next-button').click(function(){
         $('#game-contain').addClass('hide');
+        $('#skip').addClass('hide');
         $('#cal-contain').removeClass('hide');
                 // console.dir($('#game-title'));
 

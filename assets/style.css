@@ -103,6 +103,10 @@
     background-color: #F3F3F3
 }
 
+.center {
+    text-align: center;
+}
+
 /* ---------------- */
 
 @media only screen and (max-width: 768px) {
