@@ -2,45 +2,34 @@
 
 ## Project Description
 
-This is my personal refactor of a group project. My wonderful, original teammates can be found in [Team](#Team)
-
+This is my personal refactor of a group project. My wonderful, original teammates can be found in [Team](#Team).
 Our original repo can be found here 🙂 [QR-aid Codes](https://github.com/Diegopie/QR-aid-Codes)
 
-For clan/group leaders to organize their play sessions
-
-Allows them to plan and send invites across different time zones
-
-    Invite includes:
-       - Game information
-       - Time of play session
-       - Store information
-       - Other relevant information 
+This application is designed to solve the issue of organizing play sessions with friends. Rather than deal with a group chat to figure out a play time, users of this app can create a custom QR code to share with their friends. Scanning this code will add the event details to an email calendar so everyone is in sync!  
 
 Users can easily send all this information to their friend's preferred calendar application
 
-## User Story
+## Usage
 
-As a clan/group leader who wants to plan a gaming session:
+<img src="./assets/image/demo-example.gif" width="600px"/>
 
-I have a search bar to find my favorite games
+For users who want inspiration for their next play session, they can visit the landing page to find random multiplayer games on every visit.
+For users who want to know information about what systems and store platforms a game is on, they can use the search bar in the events page.
+With a game selected, users can schedule a time for their play session!
+For users who know what event they would like to create, the can press Skip To Custom Calendar in the events page to create a custom calendar QR code for any event!
 
-When I find my favorite game,
-
-* I see relevant information about it
-
-When I want to make a play session
-
-* I can easily set a data, time, and description of what we're playing and send that to my friends
+Link to the live site: [QR-aid Codes](https://diegopie.github.io/qraid-codes/)
 
 -----
 
-![Application landing page](./assets/image/readme-demo.gif)
+## Technology
 
-Link to the live site: [QR-aid Codes](https://diegopie.github.io/qraid-refactor)
+| | | |
+| ------ | ------ | ------ |
+| [jquery](https://jquery.com/) | [qrickit api](https://qrickit.com/qrickit_apps/qrickit_api.php) | [rawg.io api](https://rawg.io/apidocs) |
+[Bulma Framework](https://bulma.io/) |
 
------
-
-### Team
+## Team
 
 Team leader: Diego Hernandez
 
@@ -48,8 +37,14 @@ Team Capsule Corp. HTML/CSS: [Anastaisha Volosevych](https://github.com/volosevy
 
 Team Planet Namek JavaScript/API: [Diego Hernandez](https://github.com/Diegopie), [Seth Martineau](https://github.com/slothings)
 
-### Credits
+## Credits
 
-Made by [Anastaisha Volosevych](https://github.com/volosevych), [Diego Hernandez](https://github.com/Diegopie), [Seth Martineau](https://github.com/slothings), and [Jordan Kirby](https://github.com/Feizhi255)
+Made by
+| | |
+| ------ | ------ |
+| [Anastaisha Volosevych](https://github.com/volosevych) | <img src= "https://avatars.githubusercontent.com/u/66918031?v=4" style="border-radius: 18px" width="100px" style = "border: 2px solid green" /> |
+| [Diego Hernandez](https://github.com/Diegopie) | <img src= "https://avatars.githubusercontent.com/u/67803440?v=4" style="border-radius: 18px" width="100px" style = "border: 2px solid green" /> |
+| [Seth Martineau](https://github.com/slothings) | <img src= "https://avatars.githubusercontent.com/u/67659071?v=4" style="border-radius: 18px" width="100px" style = "border: 2px solid green" /> |
+| [Jordan Kirby](https://github.com/Feizhi255) | <img src= "https://avatars.githubusercontent.com/u/64999600?v=4" style="border-radius: 18px" width="100px" style = "border: 2px solid green" /> |
 
-Special thanks to: [qrickit.com](https://qrickit.com/qrickit_apps/qrickit_api.php) , [rawg.io](https://rawg.io/apidocs) for our API's and for [Bulma](https://bulma.io/) for the CSS framework# qr-aid-refactor
+Special thanks to: [qrickit.com](https://qrickit.com/qrickit_apps/qrickit_api.php), [rawg.io](https://rawg.io/apidocs) for our API's and for [Bulma](https://bulma.io/) for the CSS framework
