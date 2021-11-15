@@ -11,71 +11,28 @@ bulmaCarousel.attach('#slider', {
 
 // * Code for Carousel Images
 
-// https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-added
-
 $.ajax({
-    url: 'https://api.rawg.io/api/games?dates=2010-01-01,2020-09-01&ordering=-added',
+    url: 'https://api.rawg.io/api/games?ordering=-added&key=290a2f4d6d414e40a682d5e31ce6648c&tags=multiplayer',
     method: 'GET',
 }).then(function (response) {
-
-    i = Math.floor(Math.random() * 20);
-    // console.log(response);
-    //function(response)
-    $('#randomPic1').html('<img src=' + response.results[i].background_image + ' />').attr('alt', response.results[i].name).attr('value', response.results[i].name);
-    $('.item__title1').html(response.results[i].name);
-});
-
-$.ajax({
-    url: 'https://api.rawg.io/api/games?dates=2010-01-01,2020-09-01&ordering=-added',
-    method: 'GET',
-}).then(function (response) {
-    i = Math.floor(Math.random() * 20);
-    // console.log(response);
-    //function(response)
-    $('#randomPic2').html('<img src=' + response.results[i].background_image + ' />').attr('alt', response.results[i].name).attr('value', response.results[i].name);
-    $('.item__title2').html(response.results[i].name);
-});
-
-$.ajax({
-    url: 'https://api.rawg.io/api/games?dates=2010-01-01,2020-09-01&ordering=-added',
-    method: 'GET',
-}).then(function (response) {
-    i = Math.floor(Math.random() * 20);
-    // console.log(response);
-    //function(response)
-    $('#randomPic3').html('<img src=' + response.results[i].background_image + ' />').attr('alt', response.results[i].name).attr('value', response.results[i].name);
-    $('.item__title3').html(response.results[i].name);
-});
-
-$.ajax({
-    url: 'https://api.rawg.io/api/games?dates=2010-01-01,2020-09-01&ordering=-added',
-    method: 'GET',
-}).then(function (response) {
-    i = Math.floor(Math.random() * 20);
-    // console.log(response);
-    //function(response)
-    $('#randomPic4').html('<img src=' + response.results[i].background_image + ' />').attr('alt', response.results[i].name).attr('value', response.results[i].name);
-    $('.item__title4').html(response.results[i].name);
-});
-
-$.ajax({
-    url: 'https://api.rawg.io/api/games?dates=2010-01-01,2020-09-01&ordering=-added',
-    method: 'GET',
-}).then(function (response) {
-    i = Math.floor(Math.random() * 20);
-    // console.log(response);
-    //function(response)
-    $('#randomPic5').html('<img src=' + response.results[i].background_image + ' />').attr('alt', response.results[i].name).attr('value', response.results[i].name);
-    $('.item__title5').html(response.results[i].name);
+    console.log(response);
+    for (let i = 1; i < 6; i++) {
+        let random = Math.floor(Math.random() * 20);
+        $('#randomPic' + i).html('<img src=' + response.results[random].background_image + ' />').attr('alt', response.results[random].name).attr('value', response.results[random].name);
+        $('.item__title' + i).html(response.results[random].name);
+    }
 });
 
 // * Listener To Send User to Events and Load the Game They Clicked
-$("#slider").click(function(){
+$("#slider").click(function (event) {
     // Get value of what they clicked
     let userGame = $(event.target).parent()[0].attributes[3].value;
-            // console.dir(userGame);
+    // console.dir(userGame);
     // Store value in local storage
     localStorage.setItem('passGame', userGame);
     // Send user to events.html
     window.location.href = "events.html";
 });
+
+
+console.log(API);
