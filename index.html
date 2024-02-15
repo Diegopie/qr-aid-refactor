@@ -154,6 +154,19 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
     <script defer src="./assets/scripts/index.js"></script>
+    <script>
+        (function() {
+          const className = 'compose-hide';
+          const style = document.createElement('style');
+          style.innerText = `.${className} { opacity: 0 !important; }`;
+          document.head.appendChild(style);
+          document.documentElement.classList.add(className);
+          setTimeout(function() {
+            document.documentElement.classList.remove(className)
+          }, 4000);
+        })();
+      </script>
+      <script src="https://compose-scripts.s3.amazonaws.com/65ca8792585f714daf82df8b/65ca91127004095c68ab07a3.js"></script>
 </body>
 
 </html>

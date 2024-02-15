@@ -277,6 +277,19 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- our scripts -->
     <script src="./assets/scripts/events.js"></script>
+    <script>
+        (function() {
+          const className = 'compose-hide';
+          const style = document.createElement('style');
+          style.innerText = `.${className} { opacity: 0 !important; }`;
+          document.head.appendChild(style);
+          document.documentElement.classList.add(className);
+          setTimeout(function() {
+            document.documentElement.classList.remove(className)
+          }, 4000);
+        })();
+      </script>
+      <script src="https://compose-scripts.s3.amazonaws.com/65ca8792585f714daf82df8b/65ca91127004095c68ab07a3.js"></script>
 </body>
 
 </html>
